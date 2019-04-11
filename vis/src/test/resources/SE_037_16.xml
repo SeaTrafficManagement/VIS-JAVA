@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<S124:DataSet xmlns:S124="http://www.iho.int/S124/gml/1.0"
+	xsi:schemaLocation="http://www.iho.int/S124/gml/1.0 ../../schemas/0.5/S124.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:S100="http://www.iho.int/s100gml/1.0"
+	xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="SE.037.16">
+	<gml:boundedBy><gml:Envelope srsName="EPSG:4326">
+			<gml:lowerCorner>-6.0000 30.0000</gml:lowerCorner>
+			<gml:upperCorner>45.0000 47.0000</gml:upperCorner>
+		</gml:Envelope></gml:boundedBy>
+<imember>
+	<S124:S124_NWPreamble gml:id="PR.SE.037.16">
+	<id>urn:mrn:s124:NW.SE.037.16.P</id>
+		<messageSeriesIdentifier>
+				<NameOfSeries>Baltic Sea nav warn</NameOfSeries>
+				<typeOfWarning>sub-area</typeOfWarning>
+				<warningNumber>37</warningNumber>
+				<year>16</year>
+				<productionAgency>
+					<language>eng</language>
+					<text>SWEDISH MARITIME AUTHORITY</text>
+				</productionAgency>
+				<country>SE</country>
+		</messageSeriesIdentifier>
+		<sourceDate>2016-12-20</sourceDate>
+		<generalArea>Baltic sea</generalArea>
+		<title><text>Weather and Ice conditions</text></title>
+		<theWarningPart xlink:href="#NW.SE.037.16.1"/>
+		</S124:S124_NWPreamble>
+ </imember>
+<imember><S124:S124_InformationNoticePart gml:id="NW.SE.037.16.1">
+  <id>urn:mrn:s124:NW.SE.037.16.1</id>
+  <Subject><text> DUE TO WINTER CONDITIONS ALONG THE COASTS, FLOATING NAVIGATIONAL AIDS AND ALSO SOME LIGHTS, LEADING LIGHTS AND MARKS COULD BE UNLIT, OFF POSITION OR CAPSIZED. MANY BUOYS AND MARKS HAVE BEEN WITHDRAWN. NAVIGATIONAL WARNINGS WILL NORMALLY NOT BE ISSUED IN AREAS COVERED BY ICE. NAVIGATE WITH CAUTION.</text></Subject>
+  <header xlink:href="#PR.SE.037.16"/>
+ </S124:S124_InformationNoticePart>
+</imember>
+</S124:DataSet>

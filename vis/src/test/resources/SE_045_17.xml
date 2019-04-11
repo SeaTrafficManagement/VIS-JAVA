@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<S124:DataSet xmlns:S124="http://www.iho.int/S124/gml/1.0"
+	xsi:schemaLocation="http://www.iho.int/S124/gml/1.0 ../../schemas/0.5/S124.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:S100="http://www.iho.int/s100gml/1.0"
+	xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="SE.045.17">
+	<gml:boundedBy><gml:Envelope srsName="EPSG:4326">
+			<gml:lowerCorner>-6.0000 30.0000</gml:lowerCorner>
+			<gml:upperCorner>45.0000 47.0000</gml:upperCorner>
+		</gml:Envelope></gml:boundedBy>
+<imember>
+	<S124:S124_NWPreamble gml:id="PR.SE.045.17">
+	<id>urn:mrn:s124:NW.SE.045.17.P</id>
+		<messageSeriesIdentifier>
+				<NameOfSeries>Swedish nav warn</NameOfSeries>
+				<typeOfWarning>coastal</typeOfWarning>
+				<warningNumber>45</warningNumber>
+				<year>17</year>
+				<productionAgency>
+					<language>eng</language>
+					<text>SWEDISH MARITIME AUTHORITY</text>
+				</productionAgency>
+				<country>SE</country>
+		</messageSeriesIdentifier>
+		<sourceDate>2017-02-25</sourceDate>
+		<generalCategory>SAR and anti pollution operations</generalCategory>
+		<generalArea>Southern Baltic</generalArea>
+		<locality><text>Kattegat</text></locality>
+		<title><text>Rescue operation - sailing boat is lost with four men overboard in aproximate position 57-51,0N 011-30,0E </text></title>
+		<theWarningPart xlink:href="#NW.SE.045.17.1"/>
+		</S124:S124_NWPreamble>
+ </imember>
+ <member>
+	<S124:S124_NavigationalWarningPart gml:id="NW.SE.045.17.1">
+	 <id>urn:mrn:s124:NW.SE.045.17.1</id>
+	<geometry>
+	<S100:pointProperty>
+ 			<S100:Point gml:id="PT.SE.045.17.1" srsName="EPSG:4326">
+				<gml:pos>57.85 11.5</gml:pos>
+ 			</S100:Point>
+		</S100:pointProperty>
+	</geometry>
+	<areaAffected>
+   <S100:surfaceProperty>
+     <gml:Surface gml:id="S.SE.045.17.1" srsName="EPSG:4326">
+      <gml:patches>
+       <gml:PolygonPatch>
+        <gml:exterior>
+         <gml:Ring>
+          <gml:curveMember>
+           <gml:Curve gml:id="C.SE.045.17.1.1" srsName="EPSG:4326">
+            <gml:segments>
+             <S100:S100_CircleByCenterPoint> 
+              <gml:pos>57.85 11.5</gml:pos>
+              <S100:radius uom="NM">20.0</S100:radius>
+			  <S100:startAngle>0.0</S100:startAngle>
+			  <S100:angularDistance>360</S100:angularDistance>
+              </S100:S100_CircleByCenterPoint>
+            </gml:segments>
+           </gml:Curve>
+          </gml:curveMember>
+         </gml:Ring>
+        </gml:exterior>
+       </gml:PolygonPatch>
+      </gml:patches>
+     </gml:Surface>
+    </S100:surfaceProperty>
+</areaAffected>
+		<Subject>
+			<text>SHIPS IN VICINITY ARE REQUESTED TO PROCEED FOR SEARCH OPERATIONS INFORMING JRCC SWEDEN. AFFECTED AREA WITH POINT IN POSITION 57-51,0N 011-30,0E WITH RADIUS 20 NAUTICAL MILES</text>
+		</Subject>
+			<header xlink:href="#PR.SE.045.17"/>
+	</S124:S124_NavigationalWarningPart>
+</member>
+</S124:DataSet>

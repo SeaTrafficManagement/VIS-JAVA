@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<textMessage  xmlns="http://tempuri.org/TextFormat.xsd">
+  <textMessageId>id12345</textMessageId>
+  <informationObjectReferenceId>k34k234hg2j4dsf</informationObjectReferenceId>
+  <author>Pierre dela Cruz</author>
+  <from>Pierra dela Cruz</from>
+  <serviceType>VIS</serviceType>
+  <createdAt>2016-06-26T13:13:13</createdAt>
+  <subject>Subject 2</subject>
+  <body>Body with rtz?</body>
+  <position lat="-27.03" lon="-179.99" />
+  <area>
+    <surfaceProperty xmlns="http://www.iho.int/s100gml/1.0">
+      <Polygon a:id="s.NW.I.001.16.1" srsDimension="333" srsName="EPSG:4326" xmlns:a="http://www.opengis.net/gml/3.2">
+        <a:exterior>
+          <a:LinearRing>
+            <a:posList>
+                  59.803000 23.836666 59.873917 23.833745 59.902731 24.095344 59.902560 24.370768
+            </a:posList>
+          </a:LinearRing>
+        </a:exterior>
+      </Polygon>
+    </surfaceProperty>
+  </area>
+</textMessage>

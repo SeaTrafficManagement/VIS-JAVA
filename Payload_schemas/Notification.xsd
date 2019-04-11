@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Notification" type="Notification"/>
+	<xs:complexType name="Notification">
+		<xs:annotation>
+			<xs:documentation>To inside application, such as STM Module</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="id" type="xs:string" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identity of the notification, mandatory</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="notificationType" type="enumNotificationType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Type of notification by enumeration</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="notificationCreatedAt" type="xs:dateTime" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Notification created at date and time, mandatory</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fromId" type="xs:string" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Source of notification and source for retrieving the complete message, mandatory</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fromName" type="xs:string" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Friendly name of sender for presentation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="receivedAt" type="xs:dateTime" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date and time for the reception of the message.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="messageWaiting" type="xs:int" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>&gt;0 if a message is waiting in server, otherwise 0, mandatory</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="subject" type="xs:string" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Notification subject, mandatory</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="body" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Notification body, optional
+If message less than X bytes, the message (XML) can be sent in the body of the notification.
+Needs to be aligned with STM Module and ship operator configuration and policies</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="enumNotificationType" type="enumNotificationType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="enumNotificationType">
+		<xs:annotation>
+			<xs:documentation>Types of notifications</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="MESSAGE_WAITING"/>
+			<xs:enumeration value="VOYAGEPLAN_REQUESTED"/>
+			<xs:enumeration value="AUTHORIZATION_REQUESTED"/>
+			<xs:enumeration value="ERROR_MESSAGE"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<S124:DataSet xmlns:S124="http://www.iho.int/S124/gml/1.0"
+	xsi:schemaLocation="http://www.iho.int/S124/gml/1.0 ../../schemas/0.5/S124.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:S100="http://www.iho.int/s100gml/1.0"
+	xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="RU.060.17">
+	<gml:boundedBy><gml:Envelope srsName="EPSG:4326">
+			<gml:lowerCorner>-6.0000 30.0000</gml:lowerCorner>
+			<gml:upperCorner>45.0000 47.0000</gml:upperCorner>
+		</gml:Envelope></gml:boundedBy>
+<imember>
+	<S124:S124_NWPreamble gml:id="PR.RU.060.17">
+	<id>urn:mrn:s124:NW.RU.060.17.P</id>
+		<messageSeriesIdentifier>
+				<NameOfSeries>Kaliningrad nav warn</NameOfSeries>
+				<typeOfWarning>coastal</typeOfWarning>
+				<warningNumber>60</warningNumber>
+				<year>17</year>
+				<productionAgency>
+					<language>eng</language>
+					<text>KALININGRAD HYDROGRAPHY SERVICE</text>
+				</productionAgency>
+				<country>RU</country>
+		</messageSeriesIdentifier>
+		<sourceDate>2017-05-09</sourceDate>
+		<generalCategory>military exersices</generalCategory>
+		<generalArea>Southern Baltic</generalArea>
+		<locality><text>Kaliningrad approaches</text></locality>
+		<title><text>gunnery exercises from 100000 UTC to 152359 UTC May 17 </text></title>
+		<fixedDateRange>
+			<timeOfDayStart>00:00:00Z</timeOfDayStart>
+				<timeOfDayEnd>23:59:00Z</timeOfDayEnd>
+			<dateStart>
+				<date>2017-05-10</date></dateStart>
+			<dateEnd>
+		<date>2017-05-15</date></dateEnd>
+	</fixedDateRange>
+		<theWarningPart xlink:href="#NW.RU.060.17.1"/>
+		</S124:S124_NWPreamble>
+ </imember>
+ <member>
+	<S124:S124_NavigationalWarningPart gml:id="NW.RU.060.17.1">
+	 <id>urn:mrn:s124:NW.RU.060.17.1</id>
+	<geometry>
+	<S100:surfaceProperty>
+     <gml:Surface gml:id="S.RU.060.17.1" srsName="EPSG:4326">
+      <gml:patches>
+       <gml:PolygonPatch>
+        <gml:exterior>
+         <gml:Ring>
+          <gml:curveMember>
+           <gml:Curve gml:id="C.RU.060.17.1.1" srsName="EPSG:4326">
+            <gml:segments>
+             <S100:S100_ArcByCenterPoint> <!-- interpolation="circularArcCenterPointWithRadius"> -->
+              <gml:pos>54.91 19.87</gml:pos>
+              <S100:radius uom="NM">10.0</S100:radius>
+			  <S100:startAngle>270.0</S100:startAngle>
+			  <S100:angularDistance>360</S100:angularDistance>
+              </S100:S100_ArcByCenterPoint>
+            </gml:segments>
+           </gml:Curve>
+          </gml:curveMember>
+         </gml:Ring>
+        </gml:exterior>
+       </gml:PolygonPatch>
+      </gml:patches>
+     </gml:Surface>
+    </S100:surfaceProperty>
+	</geometry>
+		<Subject><text>Area-sector within 10 miles of: 54-54.6N 19-52.2E between 270 degrees and 360 degrees</text></Subject>
+		<header xlink:href="#PR.RU.060.17"/>
+	</S124:S124_NavigationalWarningPart>
+</member>
+</S124:DataSet>

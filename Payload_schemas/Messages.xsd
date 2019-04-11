@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include/>
+	<xs:include/>
+	<xs:element name="Message" type="Message"/>
+	<xs:complexType name="Message">
+		<xs:annotation>
+			<xs:documentation>Message to the STM Module</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="id" type="xs:string" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identity of the message</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="receivedAt" type="xs:dateTime" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Date and time of reception</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="from" type="URN" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identity of the message source</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="messageType" type="messageType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Type of STM message</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="message" type="STMMessage" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The message of any STM format</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="messageType" type="messageType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="STMMessage" type="STMMessage" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Messages" type="Messages"/>
+	<xs:complexType name="Messages">
+		<xs:annotation>
+			<xs:documentation>Container for messages to STM Module</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="numberOfMessages" type="xs:int" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Total number of messages in this container</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="remainingNumberOfMessages" type="xs:int" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Remaining messages waiting to be retrieved</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Message" type="Message" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

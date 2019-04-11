@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<S124:DataSet xmlns:S124="http://www.iho.int/S124/gml/1.0"
+	xsi:schemaLocation="http://www.iho.int/S124/gml/1.0 ../../schemas/0.5/S124.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:S100="http://www.iho.int/s100gml/1.0"
+	xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="DK.034.17">
+	<gml:boundedBy><gml:Envelope srsName="EPSG:4326">
+			<gml:lowerCorner>5.0000 50.0000</gml:lowerCorner>
+			<gml:upperCorner>45.0000 65.0000</gml:upperCorner>
+		</gml:Envelope></gml:boundedBy>
+<imember>
+	<S124:S124_NWPreamble gml:id="PR.DK.034.17">
+	<id>urn:mrn:s124:NW.DK.034.17.P</id>
+		<messageSeriesIdentifier>
+				<NameOfSeries>Danish nav warn</NameOfSeries>
+				<typeOfWarning>coastal</typeOfWarning>
+				<warningNumber>34</warningNumber>
+				<year>17</year>
+				<productionAgency>
+					<language>eng</language>
+					<text>DANISH MARITIME AUTHORITY</text>
+				</productionAgency>
+				<country>DK</country>
+		</messageSeriesIdentifier>
+		<sourceDate>2017-02-27</sourceDate>
+		<generalArea>The Belts</generalArea>
+		<title><text>TSS "BETWEEN KORSOER AND SPROGOE". REDUCED DEPTHS OBSERVED</text></title>
+		<theWarningPart xlink:href="#NW.DK.034.17.1"/>
+		<theWarningPart xlink:href="#NW.DK.034.17.2"/>
+		<theWarningPart xlink:href="#NW.DK.034.17.3"/>
+		</S124:S124_NWPreamble>
+</imember>
+<member>
+	<S124:S124_NavigationalWarningPart gml:id="NW.DK.034.17.1">
+		<id>urn:mrn:s124:NW.DK.034.17.1</id>
+		<geometry>
+			<S100:pointProperty>
+				<S100:Point gml:id="PT.DK.034.17.1" srsName="EPSG:4326">
+					<gml:pos>55.32 11.042166666</gml:pos>
+				</S100:Point>
+			</S100:pointProperty>
+		</geometry>
+		<Subject><text>REDUCED DEPTHS OBSERVED - 16,58M AT THE COORDINATES 55-19.20N 11-02.53E</text></Subject>
+		<header xlink:href="#PR.DK.034.17"/>
+	</S124:S124_NavigationalWarningPart>
+</member>
+<member>
+	<S124:S124_NavigationalWarningPart gml:id="NW.DK.034.17.2">
+		<id>urn:mrn:s124:NW.DK.034.17.2</id>
+		<geometry>
+			<S100:pointProperty>
+				<S100:Point gml:id="PT.DK.034.17.2" srsName="EPSG:4326">
+					<gml:pos>55.3256 11.044</gml:pos>
+				</S100:Point>
+			</S100:pointProperty>
+		</geometry>
+		<Subject><text>REDUCED DEPTHS OBSERVED - 16,76M AT THE COORDINATES 55-19.54N 11-02.64E </text></Subject>
+		<header xlink:href="#PR.DK.034.17"/>
+	</S124:S124_NavigationalWarningPart>
+</member>
+<member>
+	<S124:S124_NavigationalWarningPart gml:id="NW.DK.034.17.3">
+		<id>urn:mrn:s124:NW.DK.034.17.3</id>
+		<geometry>
+			<S100:pointProperty>
+				<S100:Point gml:id="PT.DK.034.17.3" srsName="EPSG:4326">
+					<gml:pos>55.3241666 11.0446666</gml:pos>
+				</S100:Point>
+			</S100:pointProperty>
+		</geometry>
+		<Subject><text>REDUCED DEPTHS OBSERVED - 16,90M AT THE COORDINATES 55-19.45N 11-02.68E </text></Subject>
+		<header xlink:href="#PR.DK.034.17"/>
+	</S124:S124_NavigationalWarningPart>
+</member>
+</S124:DataSet>

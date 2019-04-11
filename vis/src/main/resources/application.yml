@@ -1,0 +1,32 @@
+springfox.documentation.swagger.v2.path: /api-docs
+server.contextPath: /vis
+server.port: 8001
+vis:
+  config:
+    ssc:
+      endpoint: http://localhost:8102 #endpoint to the seaswim connector associated with the service
+      interface: REST #private API protocol used by the service to communicate with seaswim connector (REST, SOAP)
+    identity: vis-identity
+    name: VIS
+    system: STM
+    component: STM-MODULE-1
+    privateApi:
+      port: 8888
+    acknowledgment:
+      subject: Acknowledgement received
+    message-waiting: 
+      subject: VIS message waiting
+    authorization-requested: 
+      subject: Authorization request
+    timer-job:
+      delay: 600000 # time in milliseconds (e.g. 5 sec = 5000 ms)
+      unfetched-time: 300000 # time in milliseconds (e.g. 5 min = 300 sec = 300000 ms)
+    addMessageToNotification: true
+    security:
+      key-store : classpath:keystores/viscimne1-keystore.jks #keystore (private key) location
+      key-store-password: cimnessc #keystore password
+      key-password: cimnessc #private key password
+      trust-store: classpath:keystores/mc-truststore.jks
+      trust-store-password: changeit
+
+#logging.level.org.springframework: DEBUG

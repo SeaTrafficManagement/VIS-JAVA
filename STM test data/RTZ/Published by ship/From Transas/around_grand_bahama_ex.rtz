@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<route xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://www.cirm.org/RTZ/2/0" version="2.0"
+         xsi:schemaLocation="c:\Users\vbotnev\Documents\rtz_format.xsd">
+    <routeInfo routeName="Around Grand Bahama"
+        routeVersion="7D1DFAEC-3521-49D1-9EB1-E81805C43CFE"
+        routeAuthor="Simon Ross"
+        routeStatus="7"
+        validityPeriodStart="2016-10-20T03:15:00Z"
+        validityPeriodStop="2016-10-22T10:15:00Z"
+        vesselName="Pegasus"
+        vesselMMSI="220348970"
+        vesselIMO="3798347"
+        vesselVoyage="urn:mrn:mcl:org:acme:b6d7b492-ab3c-42f2-8afd-116c3d872f0c"
+        vesselDisplacement="157"
+        vesselCargo="14"
+        vesselGM="2.16"
+        vesselMaxRoll="17"
+        vesselMaxWave="9.4"
+        vesselMaxWind="55.3"
+        vesselSpeedMax="23.8"
+        vesselServiceMin="16.9"
+        vesselServiceMax="21.4">
+        <routeChangesHistory>
+            <historyItem dateTime="2016-10-20T11:14:41Z" author="Simon Ross"
+                reason="initial creation"/>
+            <historyItem dateTime="2016-10-21T09:12:29Z" author="William Brown"
+                reason="corrections for reference points using"/>
+        </routeChangesHistory>
+        <extensions>
+            <extension manufacturer="Transas"
+                version="1.0"
+                name="product_info"
+                direction="shs"
+                solution="mfd4000"
+                solution_version="3.50">
+            </extension>
+        </extensions>
+    </routeInfo>
+    <waypoints>
+        <defaultWaypoint radius="1.50" id="8">
+            <leg starboardXTD="0.30"
+                portsideXTD="0.30"
+                safetyContour="9.1"
+                safetyDepth="9.1"
+                geometryType="Loxodrome"
+                speedMin="16.0"
+                speedMax="22.0"
+                draughtForward="8.9"
+                draughtAft="9.1"
+                staticUKC="0.9"
+                dynamicUKC="0.6"
+                masthead="21.3"/>
+        </defaultWaypoint>
+        <waypoint id="0" revision="2">
+            <position lat="26.69215" lon="-79.00097"/>
+        </waypoint>
+        <waypoint id="1" revision="1" radius="1.17">
+            <position lat="26.69807" lon="-79.10312"/>
+            <leg starboardXTD="0.12"
+                portsideXTD="0.15"
+                safetyContour="9.6"
+                safetyDepth="9.6"/>
+            <extensions>
+                <extension manufacturer="Transas"
+                    version="1.0"
+                    name="ref_point"
+                    refName="Memory Rock Light">
+                    <position lat="26.94708" lon="-79.09999"/>
+                </extension>
+            </extensions>
+        </waypoint>
+        <waypoint id="2" revision="1" radius="1.10">
+            <position lat="27.39923" lon="-79.37497"/>
+            <leg starboardXTD="0.25"
+                portsideXTD="0.25"
+                safetyContour="9.6"
+                safetyDepth="9.6"/>
+        </waypoint>
+        <waypoint id="3" revision="1" radius="1.23">
+            <position lat="27.14133" lon="-78.80325"/>
+            <leg starboardXTD="0.50"
+                portsideXTD="0.50"
+                safetyContour="9.6"
+                safetyDepth="9.6"/>
+        </waypoint>
+        <waypoint id="4" revision="1" radius="2.05">
+            <position lat="26.73555" lon="-76.72153"/>
+            <leg starboardXTD="0.40"
+                portsideXTD="0.40"
+                safetyContour="9.1"
+                safetyDepth="9.1"/>
+            <extensions>
+                <extension manufacturer="Transas"
+                    version="1.0"
+                    name="ref_point"
+                    refName="Elbow Cay Light">
+                    <position lat="26.54003" lon="-76.95711"/>
+                </extension>
+            </extensions>
+        </waypoint>
+        <waypoint id="5" revision="3" radius="1.53">
+            <position lat="25.68932" lon="-77.08762"/>
+            <leg starboardXTD="0.45"
+                portsideXTD="0.30"
+                safetyContour="9.1"
+                safetyDepth="9.1"/>
+            <extensions>
+                <extension manufacturer="Transas"
+                    version="1.0"
+                    name="ref_point"
+                    refName="Abaco Light">
+                    <position lat="25.86306" lon="-77.19068"/>
+                </extension>
+            </extensions>
+        </waypoint>
+        <waypoint id="6" revision="1" radius="1.74">
+            <position lat="26.37485" lon="-78.87357"/>
+            <leg starboardXTD="0.25"
+                portsideXTD="0.25"
+                safetyContour="9.1"
+                safetyDepth="9.1"/>
+            <extensions>
+                <extension manufacturer="Transas"
+                    version="1.0"
+                    name="ref_point"
+                    refName="Southwest Point Light">
+                    <position lat="26.51165" lon="-78.75640"/>
+                </extension>
+            </extensions>
+        </waypoint>
+        <waypoint id="7" revision="2">
+            <position lat="26.68907" lon="-79.00027"/>
+            <leg starboardXTD="0.15"
+                portsideXTD="0.15"
+                safetyContour="9.1"
+                safetyDepth="9.1"/>
+        </waypoint>
+    </waypoints>
+    <schedules>
+        <schedule id="76607F51-0580-4829-988A-1B5861C2842A" name="2016-10-21 voyage">
+            <manual>
+                <scheduleElement waypointId="0"
+                    etd="2016-10-21T14:26:00Z"/>
+                <scheduleElement waypointId="4"
+                    stay="PT2H35M"/>
+                <scheduleElement waypointId="7"
+                    eta="2016-10-22T14:24:00Z"/>
+            </manual>
+            <calculated>
+                <scheduleElement waypointId="0"
+                    etd="2016-10-21T14:26:00Z"/>
+                <scheduleElement waypointId="1"
+                    eta="2016-10-21T14:41:00Z"
+                    etd="2016-10-21T14:41:00Z"
+                    speed="18.2"
+                    rpm="85"
+                    pitch="92"/>
+                <scheduleElement waypointId="2"
+                    eta="2016-10-21T16:52:00Z"
+                    etd="2016-10-21T16:52:00Z"
+                    speed="20.0"
+                    rpm="85"
+                    pitch="92"/>
+                <scheduleElement waypointId="3"
+                    eta="2016-10-21T19:17:00Z"
+                    etd="2016-10-21T19:17:00Z"
+                    speed="18.4"
+                    rpm="85"
+                    pitch="92">
+                    <extensions>
+                        <extension manufacturer="Transas"
+                            version="1.0"
+                            name="astronomic_event"
+                            eventType="moonset"
+                            moonPhase="lastQuarter"
+                            time="2016-10-21T16:56:00Z">
+                            <position lat="27.40289" lon="-79.35276"/>
+                        </extension>
+                    </extensions>
+                </scheduleElement>
+                <scheduleElement waypointId="4"
+                    eta="2016-10-21T01:21:00Z"
+                    etd="2016-10-21T03:56:00Z"
+                    stay="PT2H35M"
+                    speed="17.8"
+                    rpm="85"
+                    pitch="92">
+                    <extensions>
+                        <extension manufacturer="Transas"
+                            version="1.0"
+                            name="astronomic_event"
+                            eventType="sunset"
+                            moonPhase="lastQuarter"
+                            time="2016-10-21T22:35:00Z">
+                            <position lat="27.09821" lon="-77.556686"/>
+                        </extension>
+                        <extension manufacturer="Transas"
+                            version="1.0"
+                            name="astronomic_event"
+                            eventType="twilightEnd"
+                            moonPhase="lastQuarter"
+                            time="2016-10-21T23:25:00Z">
+                            <position lat="26.98840" lon="-77.303534"/>
+                        </extension>
+                    </extensions>
+                </scheduleElement>
+                <scheduleElement waypointId="5"
+                    eta="2016-10-22T07:34:00Z"
+                    etd="2016-10-22T07:34:00Z"
+                    speed="17.9"
+                    rpm="85"
+                    pitch="92"/>
+                <scheduleElement waypointId="6"
+                    eta="2016-10-22T13:18:00Z"
+                    etd="2016-10-22T13:18:00Z"
+                    speed="17.9"
+                    rpm="85"
+                    pitch="92">
+                    <extensions>
+                        <extension manufacturer="Transas"
+                            version="1.0"
+                            name="astronomic_event"
+                            eventType="twilightBegin"
+                            moonPhase="lastQuarter"
+                            time="2016-10-22T11:15:00Z">
+                            <position lat="26.124728" lon="-78.220729"/>
+                        </extension>
+                        <extension manufacturer="Transas"
+                            version="1.0"
+                            name="astronomic_event"
+                            eventType="sunrise"
+                            moonPhase="lastQuarter"
+                            time="2016-10-22T10:24:00Z">
+                            <position lat="26.024249" lon="-77.958872"/>
+                        </extension>
+                    </extensions>
+                </scheduleElement>
+                <scheduleElement waypointId="7"
+                    eta="2016-10-22T14:24:00Z"
+                    etd="2016-10-22T14:24:00Z"
+                    speed="19.0"
+                    rpm="85"
+                    pitch="92"/>
+            </calculated>
+        </schedule>
+    </schedules>
+    <extensions/>
+</route>

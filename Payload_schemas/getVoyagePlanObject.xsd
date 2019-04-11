@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include/>
+	<xs:include/>
+	<xs:element name="GetVoyagePlanObject" type="GetVoyagePlanObject"/>
+	<xs:complexType name="GetVoyagePlanObject">
+		<xs:sequence>
+			<xs:element name="UVID" type="URN" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="routeStatus" type="routeStatus" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

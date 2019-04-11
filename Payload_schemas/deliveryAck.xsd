@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include/>
+	<xs:element name="DeliveryAck" type="DeliveryAck"/>
+	<xs:complexType name="DeliveryAck">
+		<xs:annotation>
+			<xs:documentation>Object for message ACK</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="id" type="xs:string" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Id for the ACK</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="referenceId" type="URN" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Reference to delivered message</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="timeOfDelivery" type="xs:dateTime" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Time of delivery</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fromId" type="URN" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identity of source (sender
+) of message that have been delivered</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fromName" type="xs:string" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Friendly name of sender</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="toId" type="URN" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identity of target (receipent) of message delivery</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="toName" type="xs:string" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Friendly name of recipient</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ackResult" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

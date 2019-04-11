@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:simpleType name="messageType">
+		<xs:annotation>
+			<xs:documentation>Type of messages (including version)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="RTZ"/>
+			<xs:enumeration value="textMessage"/>
+			<xs:enumeration value="area"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="STMMessage" type="STMMessage"/>
+	<xs:complexType name="STMMessage">
+		<xs:annotation>
+			<xs:documentation>Abstract class representing any defined STM Message</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="route" type="route" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="textMessage" type="textMessage" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="AreaFeatureObject (Polygon)" type="AreaFeatureObject (Polygon)" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="routeStatus">
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="Original"/>
+			<xs:enumeration value="Planned_for_voyage"/>
+			<xs:enumeration value="Optimized"/>
+			<xs:enumeration value="Cross_Checked"/>
+			<xs:enumeration value="Safety_Checked"/>
+			<xs:enumeration value="Approved"/>
+			<xs:enumeration value="Used_for_monitoring"/>
+			<xs:enumeration value="Inactive"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

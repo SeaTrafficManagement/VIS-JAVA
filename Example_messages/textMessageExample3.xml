@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<textMessage  xmlns="http://tempuri.org/TextFormat.xsd">
+  <textMessageId>id12345</textMessageId>
+  <informationObjectReferenceId>k34k234hg2j4dsf</informationObjectReferenceId>
+  <author>Pierre dela Cruz</author>
+  <from>Pierra dela Cruz</from>
+  <serviceType>VIS</serviceType>
+  <createdAt>2016-06-26T13:13:13</createdAt>
+  <subject>Subject 2</subject>
+  <body>Body with rtz?</body>
+  <position lat="-27.03" lon="-179.99" />
+  <area>
+    <surfaceProperty xmlns="http://www.iho.int/s100gml/1.0">
+      <Surface xmlns="http://www.opengis.net/gml/3.2" a:id="mySurfaceId" srsDimension="1" srsName="mySurfaceName" xmlns:a="http://www.opengis.net/gml/3.2">
+        <patches>
+          <PolygonPatch>
+            <interior>
+              <Ring>
+                <curveMember>
+                  <Curve a:id="myCurveId" srsDimension="12" srsName="myCurveName" >
+                    <segments>
+                      <S100_ArcByCenterPoint xmlns="http://www.iho.int/s100gml/1.0" interpolation="circularArcCenterPointWithRadius">
+                        <a:pos>29.3 66.3</a:pos>
+                        <radius uom="m">321.6</radius>
+                        <startAngle>0.0</startAngle>
+                        <angularDistance>360.0</angularDistance>
+                      </S100_ArcByCenterPoint>
+                      <GeodesicString interpolation="geodesic">
+                        <posList>
+                          59.803000 23.836666 59.873917 23.833745 59.902731 24.095344 59.902560 24.370768
+                        </posList>
+                      </GeodesicString>
+                      <Geodesic interpolation="geodesic">
+                        <posList>
+                          59.803000 23.836666 59.873917 23.833745 59.902731 24.095344 59.902560 24.370768
+                        </posList>
+                      </Geodesic>
+                      <S100_CircleByCenterPoint xmlns="http://www.iho.int/s100gml/1.0" interpolation="circularArcCenterPointWithRadius" numDerivativeInterior="1" numDerivativesAtEnd="1" numDerivativesAtStart="1">
+                          <a:pos>
+                            59.803000 23.836666
+                          </a:pos> 
+                          <radius uom="m">123.43</radius>
+                        <startAngle>0.0</startAngle>
+                        <angularDistance>360.0</angularDistance>
+                    </S100_CircleByCenterPoint>
+                    <S100_ArcByCenterPoint xmlns="http://www.iho.int/s100gml/1.0" interpolation="circularArcCenterPointWithRadius">
+                      <a:pos>59.803000 23.836666</a:pos>
+                      <radius uom="m">111.1</radius>
+                      <startAngle>0.0</startAngle>
+                      <angularDistance>360.0</angularDistance>
+                    </S100_ArcByCenterPoint>
+                    </segments>
+                  </Curve>
+                </curveMember>
+              </Ring>
+            </interior>
+          </PolygonPatch>
+        </patches>
+      </Surface>
+    </surfaceProperty>
+  </area>
+</textMessage>

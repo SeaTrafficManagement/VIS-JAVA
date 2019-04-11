@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<textMessage xmlns="http://tempuri.org/textMessageSchema.xsd">
+       <textMessageId>urn:mrn:stm:txt:sma:123456</textMessageId>
+       <informationObjectReferenceId>urn:mrn:voyage:id:sma:test-1</informationObjectReferenceId>
+       <author>Mikael</author>
+       <from>urn:mrn:stm:org:sma</from>
+       <createdAt>2016-12-22T11:22:00Z</createdAt>
+       <subject>Arrival time Ice free route</subject>
+       <body>Recommended rendezvous point for ice route 1 Aland to Lulea</body>
+       <position lat="-27.03" lon="-179.99" />
+</textMessage>

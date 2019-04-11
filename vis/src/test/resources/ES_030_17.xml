@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<S124:DataSet xmlns:S124="http://www.iho.int/S124/gml/1.0"
+	xsi:schemaLocation="http://www.iho.int/S124/gml/1.0 ../../schemas/0.5/S124.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:S100="http://www.iho.int/s100gml/1.0"
+	xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="III.030.17">
+	<gml:boundedBy><gml:Envelope srsName="EPSG:4326">
+			<gml:lowerCorner>-6.0000 30.0000</gml:lowerCorner>
+			<gml:upperCorner>45.0000 47.0000</gml:upperCorner>
+		</gml:Envelope></gml:boundedBy>
+<imember>
+	<S124:S124_NWPreamble gml:id="PR.III.030.17">
+	<id>urn:mrn:s124:NW.III.030.17.P</id>
+		<messageSeriesIdentifier>
+				<NameOfSeries>NAVAREA III</NameOfSeries>
+				<typeOfWarning>NAVAREA</typeOfWarning>
+				<warningNumber>30</warningNumber>
+				<year>17</year>
+				<productionAgency>
+					<language>eng</language>
+					<text>INSTITUTO HIDROGRÁFICO DE LA MARINA</text>
+				</productionAgency>
+				<country>ES</country>
+		</messageSeriesIdentifier>
+		<sourceDate>2017-02-25</sourceDate>
+		<generalCategory>military exersices</generalCategory>
+		<generalArea>Western Mediterranean Sea</generalArea>
+		<locality><text>Barcelona approaches</text></locality>
+		<title><text>Military exercises, from 01 trough 31 MAR17 Cancel this message 01-00 UTC 01 APR</text></title>
+		<fixedDateRange>
+			<dateStart>
+				<date>2017-03-01</date></dateStart>
+			<dateEnd>
+		<date>2017-03-31</date></dateEnd>
+	</fixedDateRange>
+	<theWarningPart xlink:href="#NW.III.030.17.1"/>
+	<theWarningPart xlink:href="#NW.III.030.17.2"/>
+	</S124:S124_NWPreamble>
+ </imember>
+ <member>
+	<S124:S124_NavigationalWarningPart gml:id="NW.III.030.17.1">
+	 <id>urn:mrn:s124:NW.III.030.17.1</id>
+		<geometry>
+		<S100:surfaceProperty>
+		<gml:Surface gml:id="s.NW.III.030.17.1" srsName="EPSG:4326">
+			<gml:patches>
+				<gml:PolygonPatch>
+					<gml:exterior>
+						<gml:LinearRing>
+							<gml:posList>
+							41.0 1.42
+							41.0 1.85
+							40.7 1.85
+							40.7 1.42
+							41.0 1.42
+							</gml:posList>
+						</gml:LinearRing>
+					</gml:exterior>
+				</gml:PolygonPatch>
+			</gml:patches>
+		</gml:Surface>
+		</S100:surfaceProperty>
+		</geometry>
+		<Subject><text>Area bounded by 041.0N 0 001-25.2E, 041.0N 001-51.0E, 40-42.0N, 001-51.0E, 40-42.0N 001-25.2E</text></Subject>
+			<header xlink:href="#PR.III.030.17"/>
+	</S124:S124_NavigationalWarningPart>
+</member>
+<imember>
+	<S124:S124_References gml:id="NW.III.030.17.2">
+			<id>urn:mrn:s124:NW.III.030.17.2</id>
+				<referenceType>in-force</referenceType>
+			<messageReference>
+				<NameOfSeries>NAVAREA III</NameOfSeries>
+				<typeOfWarning>NAVAREA</typeOfWarning>
+				<warningNumber>30</warningNumber>
+				<year>17</year>
+				<productionAgency>
+					<language>eng</language>
+					<text>INSTITUTO HIDROGRÁFICO DE LA MARINA</text>
+				</productionAgency>
+				<country>ES</country>
+			</messageReference>
+			<cancellationTime>
+				<timeOfDayEnd>01:00:00Z</timeOfDayEnd>
+				<dateEnd>
+					<date>2017-04-01</date>
+				</dateEnd>
+			</cancellationTime>
+		<header xlink:href="NW.III.030.17"/>
+	</S124:S124_References>
+</imember>
+</S124:DataSet>

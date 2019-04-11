@@ -1,0 +1,24 @@
+<collection xmlns:ns2="urn:x-mrn:stm:schema:port-call-message:0.0.16">
+	<ns2:portCallMessage>
+		<ns2:portCallId>urn:x-mrn:stm:portcdm:port_call:SEGOT:7d464c71-8746-41c8-a15f-d4114212677b</ns2:portCallId>
+		<ns2:vesselId>urn:x-mrn:stm:vessel:IMO:6938260</ns2:vesselId>
+		<ns2:messageId>urn:x-mrn:stm:portcdm:message:b6d7b492-ab3c-42fa-8afb-116c3d872f0d</ns2:messageId>
+		<ns2:reportedAt>2017-02-08T15:01:33.000Z</ns2:reportedAt>
+		<ns2:reportedBy>UID=urn:mrn:stm:service:instance:sma:vis1, CN=VIS1, OU=service, O=urn:mrn:stm:org:sma, C=SWEDEN</ns2:reportedBy>
+		<ns2:locationState>
+			<ns2:referenceObject>VESSEL</ns2:referenceObject>
+			<ns2:time>2017-02-07T16:00:00.000Z</ns2:time>
+			<ns2:timeType>ESTIMATED</ns2:timeType>
+			<ns2:arrivalLocation>
+				<ns2:to>
+					<ns2:locationType>PILOT_BOARDING_AREA</ns2:locationType>
+					<ns2:position>
+						<ns2:latitude>0.0</ns2:latitude>
+						<ns2:longitude>0.0</ns2:longitude>
+					</ns2:position>
+					<ns2:name>Pilot Boarding Position 3</ns2:name>
+				</ns2:to>
+			</ns2:arrivalLocation>
+		</ns2:locationState>
+	</ns2:portCallMessage>
+</collection>

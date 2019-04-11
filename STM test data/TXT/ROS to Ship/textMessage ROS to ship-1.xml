@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<textMessage xmlns="http://tempuri.org/textMessageSchema.xsd">
+  <textMessageId>urn:mrn:stm:txt:sma:20161222105800-1</textMessageId>
+  <informationObjectReferenceId>urn:mrn:stm:voyage:id:sma:test-1</informationObjectReferenceId>
+  <author>Mikael</author>
+  <from>urn:mrn:stm:org:sma</from>
+  <createdAt>2016-12-22T11:09:59</createdAt>
+  <subject>Optimized route message</subject>
+  <body>Route diverted due to low pressure over North Sea</body>
+  <area>
+    <surfaceProperty xmlns="http://www.iho.int/s100gml/1.0">
+      <Polygon a:id="s.NW.I.001.16.1" srsDimension="333" srsName="EPSG:4326" xmlns:a="http://www.opengis.net/gml/3.2">
+        <a:exterior>
+          <a:LinearRing>
+            <a:posList>
+                  59.803000 23.836666 59.873917 23.833745 59.902731 24.095344 59.902560 24.370768
+            </a:posList>
+          </a:LinearRing>
+        </a:exterior>
+      </Polygon>
+    </surfaceProperty>
+  </area>
+</textMessage>

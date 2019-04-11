@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include/>
+	<xs:include/>
+	<xs:element name="GetVPResponseObject" type="GetVPResponseObject"/>
+	<xs:complexType name="GetVPResponseObject">
+		<xs:annotation>
+			<xs:documentation>Code 200 + &lt;Voyage Plan in RTZ&gt;
+Code 20x + message="No voyage plan published"
+Code 20x + message="Identity &lt;requesterIdentity&gt; is not authorized"</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="code" type="xs:int" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Status code (20x, 40x)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lastInteractionTime" type="xs:dateTime" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Last interaction time with ship or ship representative.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="subject" type="xs:string" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Message e.g. error text</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="voyagePlan" type="route" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

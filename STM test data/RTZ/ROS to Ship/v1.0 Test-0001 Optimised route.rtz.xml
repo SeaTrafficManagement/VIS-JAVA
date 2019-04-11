@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<route version="1.1" xmlns="http://www.cirm.org/RTZ/1/0">
+    <routeInfo routeName="Test-0001" vesselName="TEST-1" vesselMMSI="876983947" vesselIMO="6938260" vesselVoyage="urn:mrn:stm:voyage:id:wallenius:0001" routeStatus="3" routeAuthor="urn:mrn:stm:org:sspa" 
+	optimizationMethod="Shortest route"	routeChangesHistory="2016-12-22T13:08:00Z, SSPA, Optmised route geometry" validityPeriodStart="2016-12-22T13:00:00Z" validityPeriodStop="2016-12-23T13:00:00Z" >
+        <extensions>
+			<extension manufacturer="STM" version="1.0" name="routeInfoEx" depPort="RULED" arrPort="SEGOT" lastUpdateTime="2016-12-22T13:08:00Z"/>
+        </extensions>
+	</routeInfo>
+	<waypoints>
+		<defaultWaypoint radius="0.1">
+			<leg portXTD ="0.1" starboardXTD ="0.1"/>
+		</defaultWaypoint>
+		<waypoint id="15" revision="1">
+			<position lat="53.0492" lon="8.87731"/>
+			<leg portXTD="0.1" starboardXTD="0.1" safetyContour="11.20000000" safetyDepth="22.20000000" geometryType="loxodrome"/>
+		</waypoint>
+		<waypoint id="52" revision="4">
+			<position lat="53.0515" lon="8.87509"/>
+			<leg portXTD="0.3" starboardXTD="0.3" safetyContour="11.20000000" safetyDepth="22.20000000" geometryType="orthodrome"/>
+		</waypoint>
+		<waypoint id="1" revision="1" name="To the pier">
+			<position lat="53.5123" lon="8.11998"/>
+			<leg portXTD ="0.1" starboardXTD ="0.1"/>
+		</waypoint>
+	</waypoints>
+	<schedules>
+		<schedule id="1" name="Schedule1">
+			<manual>
+				<scheduleElement waypointId="15" etd="2002-11-17T15:25:00Z"/>
+				<scheduleElement waypointId="1" eta="2002-11-17T15:25:00Z"/>
+			</manual>
+			<calculated/>
+		</schedule>
+		<schedule id="2" name="Schedule2">
+			<manual>
+				<scheduleElement waypointId="15" etd="2002-11-17T15:25:00Z"/>
+				<scheduleElement waypointId="15" eta="2002-12-17T15:25:00Z"/>
+			</manual>
+			<calculated>
+				<scheduleElement waypointId="15" etd="2002-11-17T15:25:00Z" speed="11.34520000"/>
+				<scheduleElement waypointId="1" eta="2002-12-17T17:25:00Z" speed="12.66635112">
+				</scheduleElement>
+			</calculated>
+			<extensions/>
+		</schedule>
+		<schedule id="3" name="Schedule3_optimised">
+			<manual>
+				<scheduleElement waypointId="15" etd="2002-11-17T15:25:00Z"/>
+				<scheduleElement waypointId="1" eta="2002-12-17T17:25:00Z"/>
+			</manual>
+			<calculated>
+				<scheduleElement waypointId="15" etd="2002-11-17T15:25:00Z" speed="11.34520000"/>
+				<scheduleElement waypointId="1" eta="2002-12-17T17:20:00Z" speed="12.4" relFuelSave="1.5">
+				</scheduleElement>
+			</calculated>
+			<extensions/>
+		</schedule>
+	</schedules>
+</route>

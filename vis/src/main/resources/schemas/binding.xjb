@@ -1,0 +1,54 @@
+<jxb:bindings version="2.0"
+      xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+      xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+
+	<!-- Bindings added to solve xlink.xsd problems executing xjc -->
+	<jxb:bindings schemaLocation="http://www.w3.org/1999/xlink.xsd" node="/xs:schema">
+		<jxb:bindings node="//xs:attributeGroup[@name='locatorAttrs']">
+			<jxb:bindings node=".//xs:attribute[@ref='xlink:title']">
+				<jxb:property name="title1"/>
+			</jxb:bindings>
+		</jxb:bindings>
+		<jxb:bindings node="//xs:attributeGroup[@name='arcAttrs']">           
+			<jxb:bindings node=".//xs:attribute[@ref='xlink:title']">
+				<jxb:property name="title2"/>
+			</jxb:bindings>            
+		</jxb:bindings>              
+	</jxb:bindings>          
+
+	<!-- Bindings added to solve 'Two declarations cause a collision in the ObjectFactory class.' problems executing xjc -->
+	<jxb:bindings schemaLocation="s100gmlbase.xsd">
+		<jxb:bindings node="//xs:element[@name='MultiPoint']">
+			<jxb:factoryMethod name="GmlBaseMultiPoint"/>
+		</jxb:bindings>
+		<jxb:bindings node="//xs:element[@name='Polygon']">
+			<jxb:factoryMethod name="GmlBasePolygon"/>
+		</jxb:bindings>
+		<jxb:bindings node="//xs:element[@name='Surface']">
+			<jxb:factoryMethod name="GmlBaseSurface"/>
+		</jxb:bindings>
+		<jxb:bindings node="//xs:element[@name='CompositeCurve']">
+			<jxb:factoryMethod name="GmlBaseCompositeCurve"/>
+		</jxb:bindings>
+	</jxb:bindings>
+	<jxb:bindings schemaLocation="S100_gmlProfile.xsd">
+		<jxb:bindings node="//xs:element[@name='OrientableCurve']">
+			<jxb:factoryMethod name="GmlProfileOrientableCurve"/>
+		</jxb:bindings>
+		<jxb:bindings node="//xs:element[@name='Point']">
+			<jxb:factoryMethod name="GmlProfilePoint"/>
+		</jxb:bindings>
+		<jxb:bindings node="//xs:element[@name='CompositeCurve']">
+			<jxb:factoryMethod name="GmlProfileCompositeCurve"/>
+		</jxb:bindings>
+		<jxb:bindings node="//xs:element[@name='Curve']">
+			<jxb:factoryMethod name="GmlProfileCurve"/>
+		</jxb:bindings>
+		<jxb:bindings node="//xs:element[@name='gmlProfileSchema']">
+			<jxb:factoryMethod name="GmlProfileGmlProfileSchema"/>
+		</jxb:bindings>
+		<jxb:bindings node="//xs:element[@name='pointProperty']">
+			<jxb:factoryMethod name="GmlProfilePointProperty"/>
+		</jxb:bindings>
+	</jxb:bindings>
+</jxb:bindings>

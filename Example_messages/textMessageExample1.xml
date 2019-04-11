@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<textMessage xmlns="http://tempuri.org/TextFormat.xsd">
+  <textMessageId>id123</textMessageId>
+  <informationObjectReferenceId>kjhasd65as7d6a7wetwe7</informationObjectReferenceId>
+  <author>Per</author>
+  <from>Me</from>
+  <serviceType>VIS</serviceType>
+  <createdAt>2016-09-25T12:12:12</createdAt>
+  <subject>Subject</subject>
+  <body>body text bla bla bla ...</body>
+  <position lat="-45.45" lon="126.11" />
+  <area>
+    <surfaceProperty xmlns="http://www.iho.int/s100gml/1.0">
+      <Surface a:id="s.NW.I.001.16.1" srsDimension="123" srsName="EPSG:4326" xmlns:a="http://www.opengis.net/gml/3.2">
+        <a:patches>
+          <a:PolygonPatch>
+            <a:exterior>
+              <a:LinearRing>
+                <a:posList>
+                  59.803000 23.836666 59.873917 23.833745 59.902731 24.095344 59.902560 24.370768 59.965007 24.637580 60.047886 25.015368 60.137687 25.402824 60.173118 25.814394 60.033779 25.714923 59.873677 24.903480 59.831262 24.384379                  
+                </a:posList>
+              </a:LinearRing>
+            </a:exterior>
+          </a:PolygonPatch>
+        </a:patches>
+      </Surface>
+    </surfaceProperty>
+  </area>
+</textMessage>
+<!--<textMessage>
+  <textMessageId>str1234</textMessageId>
+  <informationObjectReferenceId>str1234</informationObjectReferenceId>
+  <author>str1234</author>
+  <from>str1234</from>
+  <serviceType>str1234</serviceType>
+  <createdAt>2012-12-13T12:12:12</createdAt>
+  <subject>str1234</subject>
+  <body>str1234</body>
+  <position lat="123.45" lon="123.45" />
+  <area>
+    <Surface id="s.NW.I.001.16.1" srsName="EPSG:4326">
+      <patches>
+        <PolygonPatch>
+          <exterior>
+            <LinearRing>
+              <posList>
+                59.803000 23.836666 59.873917 23.833745 59.902731 24.095344 59.902560 24.370768 59.965007 24.637580 60.047886 25.015368 60.137687 25.402824 60.173118 25.814394 60.033779 25.714923 59.873677 24.903480 59.831262 24.384379
+              </posList>
+            </LinearRing>
+          </exterior>
+        </PolygonPatch>
+      </patches>
+    </Surface>
+  </area>
+</textMessage>-->

@@ -1,0 +1,513 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.3",
+    "title": "STM Voyage Information Service SeaSWIM API"
+  },
+  "host": "localhost",
+  "schemes": ["http","https"],
+  "basePath": "/v2",
+  "paths": {
+    "/acknowledgement": {
+      "post": {
+        "tags": [
+          "Acknowledgement"
+        ],
+        "summary": "",
+        "description": "Endpoint for receipt of acknowledgements",
+        "operationId": "Acknowledgement",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "deliveryAck",
+            "in": "body",
+            "description": "Acknowledgement",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DeliveryAck"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseObj"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized (the user cannot be authenticated in the Identity Registry)"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          },
+          "default": {
+            "description": "unexpected error"
+          }
+        }
+      }
+    },
+    "/area": {
+      "post": {
+        "tags": [
+          "Area"
+        ],
+        "summary": "",
+        "description": "Upload area message to VIS from other services i.e. Route Check service as an informational message",
+        "operationId": "UploadArea",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "area",
+            "in": "body",
+            "description": "Area message to add to VIS message db for delivery to STM Onboard system as additional information",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "deliveryAckEndPoint",
+            "in": "query",
+            "description": "Acknowledgement required, optionally an URL could be provided to send acknowledgment.",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseObj"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized (the user cannot be auhtenticated in the Identity Registry)"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          },
+          "default": {
+            "description": "unexpected error"
+          }
+        }
+      }
+    },
+    "/textMessage": {
+      "post": {
+        "tags": [
+          "TextMessage"
+        ],
+        "summary": "",
+        "description": "Upload text message to VIS from other services i.e. Route Optimization service.",
+        "operationId": "UploadTextMessage",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "textMessageObject",
+            "in": "body",
+            "description": "Text message to add to VIS message db for delivery to STM Onboard system",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "deliveryAckEndPoint",
+            "in": "query",
+            "description": "Acknowledgement required, optionally an URL could be provided to send acknowledgment.",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseObj"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized (the user cannot be auhtenticated in the Identity Registry)"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          },
+          "default": {
+            "description": "unexpected error"
+          }
+        }
+      }
+    },
+    "/voyagePlans": {
+      "get": {
+        "tags": [
+          "VoyagePlan"
+        ],
+        "summary": "",
+        "description": "Returns active VoyagePlans",
+        "operationId": "GetVoyagePlans",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "uvid",
+            "in": "query",
+            "description": "Unique identity (URN) of a voyageplan",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "routeStatus",
+            "in": "query",
+            "description": "Status of a route for a voyageplan: 1-Original   2-Planned_for_voyage    3-Optimized 4-Cross_Checked 5-Safety_Checked    6-Approved  7-Used_for_monitoring   8-Inactive",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/GetVPResponseObject"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized (the user cannot be auhtenticated in the Identity Registry)"
+          },
+          "403": {
+            "description": "Forbidden (Not authorized request forwarded to operator)"
+          },
+          "404": {
+            "description": "Not Found (the requested voyagePlan is not found)"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          },
+          "default": {
+            "description": "unexpected error"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "VoyagePlan"
+        ],
+        "summary": "",
+        "description": "Upload VoyagePlan to VIS from other services i.e. Route Optimization service.",
+        "operationId": "UploadVoyagePlan",
+        "consumes": [
+          "text/xml",
+          "text/plain",
+          "text/javascript",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "voyagePlan",
+            "in": "body",
+            "description": "Voyage Plan to add to VIS message db",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "deliveryAckEndPoint",
+            "in": "query",
+            "description": "Acknowledgement required, optionally an URL can be provided to send acknowledgment.",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "callbackEndPoint",
+            "in": "query",
+            "description": "Callback expected, optionally an URL can be provided to send response",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseObj"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized (the user cannot be auhtenticated in the Identity Registry)"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          },
+          "default": {
+            "description": "unexpected error"
+          }
+        }
+      }
+    },
+    "/voyagePlans/subscription": {
+      "post": {
+        "tags": [
+          "VoyagePlan"
+        ],
+        "summary": "",
+        "description": "Request subscription for active Voyage Plan from other services i.e. Enhanced Monitoring",
+        "operationId": "SubscribeToVoyagePlan",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "callbackEndpoint",
+            "in": "query",
+            "description": "An endpoint (URI) specifying the address where the subscribed data is to be posted",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "uvid",
+            "in": "query",
+            "description": "Unique identity (URN) of a voyageplan",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseObj"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized (the user cannot be auhtenticated in the Identity Registry)"
+          },
+          "403": {
+            "description": "Forbidden (Not authorized request forwarded to operator)"
+          },
+          "404": {
+            "description": "Not Found (the requested Voyage Plan is not found)"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          },
+          "default": {
+            "description": "unexpected error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "VoyagePlan"
+        ],
+        "summary": "",
+        "description": "Remove subscription for active Voyage Plan from other services i.e. Enhanced Monitoring",
+        "operationId": "RemoveVoyagePlanSubscription",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "callbackEndpoint",
+            "in": "query",
+            "description": "An endpoint (URI) specifying the address where the subscribed data is to be posted",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "uvid",
+            "in": "query",
+            "description": "Unique identity (URN) of a voyageplan",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseObj"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized (the user cannot be auhtenticated in the Identity Registry)"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found (the requested Voyage Plan is not found)"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          },
+          "default": {
+            "description": "unexpected error"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "DeliveryAck": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "referenceId": {
+          "type": "string"
+        },
+        "timeOfDelivery": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fromId": {
+          "type": "string"
+        },
+        "fromName": {
+          "type": "string"
+        },
+        "toId": {
+          "type": "string"
+        },
+        "toName": {
+          "type": "string"
+        },
+        "ackResult": {
+          "type": "string"
+        }
+      }
+    },
+    "ResponseObj": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "body": {
+          "description": "Gets or Sets Body",
+          "type": "string"
+        }
+      }
+    },
+    "GetVPResponseObject": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "lastInteractionTime": {
+          "format": "date-time",
+          "description": "Gets or Sets LastInteractionTime",
+          "type": "string"
+        },
+        "voyagePlan": {
+          "description": "Gets or Sets VoyagePlan",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/VoyagePlan"
+          }
+        }
+      }
+    },
+    "VoyagePlan": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "route": {
+          "description": "Gets or Sets Route",
+          "type": "string"
+        }
+      }
+    }
+  }
+}

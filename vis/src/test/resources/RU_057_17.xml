@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<S124:DataSet xmlns:S124="http://www.iho.int/S124/gml/1.0"
+	xsi:schemaLocation="http://www.iho.int/S124/gml/1.0 ../../schemas/0.5/S124.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:S100="http://www.iho.int/s100gml/1.0"
+	xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="RU.057.17">
+	<gml:boundedBy><gml:Envelope srsName="EPSG:4326">
+			<gml:lowerCorner>10.0000 40.0000</gml:lowerCorner>
+			<gml:upperCorner>35.0000 65.0000</gml:upperCorner>
+		</gml:Envelope></gml:boundedBy>
+<imember>
+	<S124:S124_NWPreamble gml:id="PR.RU.057.17">
+	<id>urn:mrn:s124:NW.RU.057.17.P</id>
+		<messageSeriesIdentifier>
+				<NameOfSeries>KALININGRAD NAV WARN</NameOfSeries>
+				<typeOfWarning>coastal</typeOfWarning>
+				<warningNumber>57</warningNumber>
+				<year>17</year>
+				<productionAgency>
+					<language>eng</language>
+					<text>KALININGRAD HYDROGRAPHY SERVICE</text>
+				</productionAgency>
+				<country>RU</country>
+		</messageSeriesIdentifier>
+		<sourceDate>2017-03-17</sourceDate>
+		<generalCategory>military exersices</generalCategory>
+		<generalArea>Central Baltic</generalArea>
+		<locality><text>Southeastern Baltic</text></locality>
+		<title><text>SHIPS EXERCISES 181200 THRU 192100 UTC MAR IN AREAS TEMPORARILY DANGEROUS TO SHIPPING. CANCEL 055\17 MESSAGE AND CANCEL THIS MESSAGE 200000 UTC MAR.</text></title>
+		<fixedDateRange>
+			<timeOfDayStart>12:00:00Z</timeOfDayStart>
+				<timeOfDayEnd>21:00:00Z</timeOfDayEnd>
+			<dateStart>
+				<date>2017-03-18</date></dateStart>
+			<dateEnd>
+		<date>2017-03-19</date></dateEnd>
+	</fixedDateRange>
+	<theWarningPart xlink:href="#NW.RU.057.17.1"/>
+	<theWarningPart xlink:href="#NW.RU.057.17.2"/>
+	<theWarningPart xlink:href="#NW.RU.057.17.3"/>
+		</S124:S124_NWPreamble>
+ </imember>
+<member>
+	<S124:S124_NavigationalWarningPart gml:id="NW.RU.057.17.1">
+	 <id>urn:mrn:s124:NW.RU.057.17.1</id>
+		<geometry>
+		<S100:surfaceProperty>
+		<gml:Surface gml:id="s.NW.RU.057.17.1" srsName="EPSG:4326">
+			<gml:patches>
+				<gml:PolygonPatch>
+					<gml:exterior>
+						<gml:LinearRing>
+							<gml:posList>
+							55.0 20.0
+							55.333333 20.0
+							55.333333 20.5
+							55.0 20.5
+							55.0 20.0
+							</gml:posList>
+						</gml:LinearRing>
+					</gml:exterior>
+				</gml:PolygonPatch>
+			</gml:patches>
+		</gml:Surface></S100:surfaceProperty>
+		</geometry>
+		<Subject>
+			<text>Area bounded by 55-0.0N 020-0.0E 55-20.0N 020-0.0E 55-20.0N 020-30.0E 55-0.0N 020-0.0E </text>
+		</Subject>
+			<header xlink:href="#PR.RU.057.17"/>
+	</S124:S124_NavigationalWarningPart>
+</member>
+<imember>
+	<S124:S124_References gml:id="NW.RU.057.17.2">
+			<id>urn:mrn:s124:NW.RU.057.17.2</id>
+				<referenceType>cancellation</referenceType>
+			<messageReference>
+				<NameOfSeries>KALININGRAD NAV WARN</NameOfSeries>
+				<typeOfWarning>coastal</typeOfWarning>
+				<warningNumber>55</warningNumber>
+				<year>17</year>
+				<productionAgency>
+					<language>eng</language>
+					<text>KALININGRAD HYDROGRAPHY SERVICE</text>
+				</productionAgency>
+				<country>RU</country>
+			</messageReference>
+		<header xlink:href="NW.RU.057.17"/>
+	</S124:S124_References>
+</imember>
+<imember>
+	<S124:S124_References gml:id="NW.RU.057.17.3">
+			<id>urn:mrn:s124:NW.RU.057.17.3</id>
+				<referenceType>in-force</referenceType>
+			<messageReference>
+				<NameOfSeries>KALININGRAD NAV WARN</NameOfSeries>
+				<typeOfWarning>coastal</typeOfWarning>
+				<warningNumber>57</warningNumber>
+				<year>17</year>
+				<productionAgency>
+					<language>eng</language>
+					<text>KALININGRAD HYDROGRAPHY SERVICE</text>
+				</productionAgency>
+				<country>RU</country>
+			</messageReference>
+			<cancellationTime>
+				<timeOfDayEnd>00:00:00Z</timeOfDayEnd>
+				<dateEnd>
+					<date>2017-03-20</date>
+				</dateEnd>
+			</cancellationTime>
+		<header xlink:href="NW.RU.057.17"/>
+	</S124:S124_References>
+</imember>
+</S124:DataSet>
